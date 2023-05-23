@@ -60,3 +60,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2023-05-23 21:55:19.351
 !MESSAGE Classpath changed for project: SpringBootMySQL
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2023-05-23 22:02:12.204
+!MESSAGE Classpath changed for project: SpringBootMySQL
