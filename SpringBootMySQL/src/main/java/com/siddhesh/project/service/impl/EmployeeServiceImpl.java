@@ -1,5 +1,7 @@
 package com.siddhesh.project.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.siddhesh.project.model.Employee;
@@ -20,6 +22,12 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Employee saveEmployee(Employee employee) {
 		// TODO Auto-generated method stub
 		return employeeRepository.save(employee);
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		// TODO Auto-generated method stub
+		return employeeRepository.findAll();
 	}
 
 }
