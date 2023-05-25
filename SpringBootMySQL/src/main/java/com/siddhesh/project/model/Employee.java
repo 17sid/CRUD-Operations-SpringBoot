@@ -23,5 +23,29 @@ public class Employee {
 	private String lastName;
 	@Column(name = "email")
 	private String email;
+	public String getFirstName() {
+		// TODO Auto-generated method stub
+		return firstName;
+	}
+	public void setFirstName(String firstName2) {
+		// TODO Auto-generated method stub
+		this.firstName=firstName2;
+	}
+	public String getLastName() {
+		// TODO Auto-generated method stub
+		return lastName;
+	}
+	public void setLastName(String lastName2) {
+		// TODO Auto-generated method stub
+		this.lastName=lastName2;
+	}
+	public String getEmail() {
+		// TODO Auto-generated method stub
+		return email;
+	}
+	public void setEmail(String email2) {
+		// TODO Auto-generated method stub
+		this.email=email2;
+	}
 
 }

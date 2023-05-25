@@ -22,19 +22,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 
 	@Override
 	public Employee saveEmployee(Employee employee) {
-		// TODO Auto-generated method stub
 		return employeeRepository.save(employee);
 	}
 
 	@Override
 	public List<Employee> getAllEmployees() {
-		// TODO Auto-generated method stub
 		return employeeRepository.findAll();
 	}
 
 	@Override
 	public Employee getEmployeeId(long id) {
-		// TODO Auto-generated method stub
 		Optional <Employee> employee = employeeRepository.findById(id);
 //		if(employee.isPresent())
 //		{
@@ -47,6 +44,18 @@ public class EmployeeServiceImpl implements EmployeeService {
 		
 		//Using Lambda expression
 		return employeeRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Employee","Id",id));
+	}
+
+	@Override
+	public Employee updateEmployee(Employee employee, long id) {
+		Employee existingEmployee = employeeRepository.findById(id).orElseThrow(
+				() -> new ResourceNotFoundException("Employee","ID",id));
+		
+		existingEmployee.setFirstName(employee.getFirstName());
+		existingEmployee.setLastName(employee.getLastName());
+		existingEmployee.setEmail(employee.getEmail());
+		employeeRepository.save(existingEmployee);
+		return existingEmployee;
 	}
 
 }
