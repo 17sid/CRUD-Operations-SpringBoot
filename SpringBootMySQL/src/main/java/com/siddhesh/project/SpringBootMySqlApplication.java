@@ -8,7 +8,7 @@ public class SpringBootMySqlApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootMySqlApplication.class, args);
-		System.out.println("Hello");
+		System.out.println("Spring Boot CRUD operations on Employee");
 	}
 
 }
